@@ -130,24 +130,15 @@ document.addEventListener('DOMContentLoaded', function() {
  }
 });
 
-<iframe id="myIframe" src="https://jakem1213.github.io/TheLibraryOfBabelHome/" width="600" height="400"></iframe>
-
-
-  // Get a reference to the iframe element
   var myIframe = document.getElementById('myIframe');
 
-  // Send a message to the child iframe
-  myIframe.contentWindow.postMessage('Hello from the parent page', 'https://jakem1213.github.io/TheLibraryOfBabelHome/');
+  myIframe.contentWindow.postMessage('Hello from the parent page', 'https://jakem1213.github.io/thelibraryofbabel/');
 
-  // Event listener to receive messages from the iframe
-  window.addEventListener('message', function(event) {
-    if (event.origin !== 'https://jakem1213.github.io/TheLibraryOfBabelHome/') {
-      return;
-    }
-
-    console.log('Message received from child:', event.data);
   
-  });
+  window.addEventListener('message', function(event) {
+    if (event.origin !== 'https://jakem1213.github.io/thelibraryofbabel/') {
+      return; 
+    }
     
 
     
